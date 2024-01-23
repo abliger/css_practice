@@ -1,0 +1,50 @@
+div {
+    border: .2em solid black;
+    text-align: center;
+    width: 20em;
+    height: 6em;
+    overflow: hidden;
+}
+
+div span {
+    font-size: 3em;
+    line-height: 2em;
+    color: blue;
+    transition: 0.5s;
+    display: inline-block;
+    position: relative;
+}
+
+body,
+html {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+div span::before {
+    content: attr(data-text);
+    position: absolute;
+    color: red;
+}
+
+div span:nth-child(odd) {
+    transform: translateY(100%);
+}
+
+div span:nth-child(even) {
+    transform: translateY(-100%);
+}
+
+div span:nth-child(odd)::before {
+    transform: translateY(-100%);
+}
+
+div span:nth-child(even)::before {
+    transform: translateY(100%);
+}
+
+div:hover span {
+    transform: translateY(0);
+}
