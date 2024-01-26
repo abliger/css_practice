@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 整体固定长度  -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            background-color: aquamarine;
+            padding: 0;
+            margin: 0;
+        }
+
+        .content {
+            width: 1000px;
+            overflow: hidden;
+            background-image: linear-gradient(90deg, red 0, red 200px, pink 200px, pink);
+        }
+
+        .left {
+            float: left;
+            width: 200px;
+        }
+
+        .right {
+            float: left;
+            width: 800px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="left">
+                content<br />
+            </div>
+            <div class="right">
+                alksfdjkjaskdfj lsakdfjlkjkas
+                lasjdflkjakljfkljksladjfklajskldfjklsajfkljakljfkljkasljfkljaklsjdfkjasdklfjklsajfkljksldajdfkljksajfkljkalsjdfkljaskjklasjkdlfjkslajkjaklsjfkaklsfjklajsdklf
+                content<br />
+                content<br />
+                content<br />
+                content<br />
+                content<br />
+                content<br />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            margin: 0;
+            background-color: lightcoral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .mian {
+            width: 600px;
+            height: 300px;
+            background-color: #fff;
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 'a .'
+                'a .';
+            transition-duration: 2s;
+        }
+
+        .mian:hover {
+            grid-template-areas: 'a a'
+                '. .';
+        }
+
+        .item {
+            position: relative;
+            background-color: gray;
+        }
+
+        .item:nth-child(1) {
+            grid-area: a;
+            /* grid-row: span 2; */
+        }
+
+        /* .item:nth-child(1):hover { */
+        /* grid-column: span 2; */
+        /* grid-row: initial; */
+        /* } */
+
+        .item::after {
+            content: attr(data-data);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mian">
+        <div class="item" data-data="1"></div>
+        <div class="item" data-data="2"></div>
+        <div class="item" data-data="3"></div>
+    </div>
+</body>
+
+
+
+
+</html>
