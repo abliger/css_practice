@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            background-color: cornflowerblue;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        .main {
+            border: 1px solid black;
+            height: 100px;
+            line-height: 100px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .main {
+            transition: all 1s;
+        }
+
+        .main:hover {
+            box-shadow: 0 0 0 50vmax slategrey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <span class="text">Hover Me</span>
+    </div>
+</body>
+
+</html>

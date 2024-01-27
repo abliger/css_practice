@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            background-color: cornflowerblue;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 2rem;
+        }
+
+        .main {
+            background-color: black;
+            color: red;
+            width: 500px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+        }
+
+        .text {
+            /* text-shadow: 0 0 10px red; */
+        }
+
+        .text:hover {
+            animation: test 1s ease-in-out infinite alternate;
+        }
+
+        @keyframes test {
+            to {
+                text-shadow: 0 0 20px red, 0 0 20px red, 0 0 20px red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <span class="text">Box-Shadow</span>
+    </div>
+</body>
+
+</html>

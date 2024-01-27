@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            margin: 0;
+            background-color: rosybrown;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            width: 400px;
+            height: 500px;
+            background-color: black;
+            color: blueviolet;
+            font-size: 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 7px;
+        }
+
+        .text {
+            transform: rotate3d(3, 73, 23, -32deg);
+            overflow: hidden;
+            text-shadow: 0 0 .3em blueviolet, 4px 3px blueviolet, 6px 3px blueviolet,
+                8px 3px blue, 9px 3px blueviolet, 10px 3px blue;
+            animation: test 1s infinite;
+        }
+
+        @keyframes test {
+            50% {
+                text-shadow: 0 0 .3em blue, 4px 2px slateblue, 6px 2px blue,
+                    8px 2px blueviolet, 9px 2px blue, 10px 2px blueviolet;
+            }
+
+            to {
+                text-shadow: 0 0 .3em slateblue, 4px 2px slateblue, 6px 2px slateblue,
+                    8px 2px blueviolet, 9px 2px slateblue, 10px 2px blueviolet;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <span class="text">CSS 3D</span>
+        <span class="text">NEON</span>
+        <span class="text">EFFECT</span>
+    </div>
+</body>
+
+</html>

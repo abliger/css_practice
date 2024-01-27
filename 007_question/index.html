@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body,
+        html {
+            margin: 0;
+            background-color: silver;
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .main {
+            width: 300px;
+            height: 150px;
+            background-color: lightblue;
+            margin: auto;
+            text-align: center;
+            line-height: 150px;
+            border-radius: 1vmin;
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .main::before {
+            content: '';
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 0 0 0 white;
+            top: -10px;
+            left: -10px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            animation: test 4s infinite;
+            z-index: -1;
+        }
+
+        @keyframes test {
+            0% {
+                box-shadow: 0 0 white;
+            }
+
+            10% {
+                box-shadow: 0 0 red;
+            }
+
+            to {
+                box-shadow: 0 0 0 500px red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">内切角</div>
+</body>
+
+</html>
