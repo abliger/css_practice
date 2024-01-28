@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @property --angle {
+            syntax: '<angle>';
+            inherits: false;
+            initial-value: 0deg;
+        }
+
+        html,
+        body {
+            background-color: black;
+            margin: 0;
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .main {
+            margin: auto;
+            width: 260px;
+            height: 260px;
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+            position: relative;
+            background-image: conic-gradient(from var(--angle), red, yellow, gray, pink, green);
+            animation: change 1s infinite linear;
+        }
+
+        .triangle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -48%);
+            width: 240px;
+            height: 240px;
+            clip-path: polygon(50% 0, 0 100%, 100% 100%);
+            background-color: black;
+        }
+
+        @keyframes change {
+            to {
+                --angle: 360deg;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="triangle"></div>
+    </div>
+</body>
+
+</html>

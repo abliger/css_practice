@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            background-color: cornflowerblue;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 40px;
+        }
+
+        .main {
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            position: relative;
+        }
+
+        .main::after {
+            content: '';
+            position: absolute;
+            border: 1px solid;
+            inset: 0 0 0 0;
+            transition: all .5s;
+            animation: change 3s infinite linear;
+            /* background: rgba(255, 215, 0, .5); */
+        }
+
+        @keyframes change {
+
+            0%,
+            100% {
+                clip-path: inset(0 0 95% 0);
+            }
+
+            25% {
+                clip-path: inset(0 95% 0 0);
+            }
+
+            50% {
+                clip-path: inset(95% 0 0 0);
+            }
+
+            75% {
+                clip-path: inset(0 0 0 95%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">hello</div>
+</body>
+
+</html>
