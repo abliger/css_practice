@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            background-color: cornflowerblue;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        @font-face {
+            font-family: 'Anybody';
+            src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/ETCAnybodyPB.woff2') format('woff2-variations');
+        }
+
+        .main {
+            font-family: 'Anybody';
+            font-size: 48px;
+            animation: fontWeightChange 2s infinite alternate linear;
+        }
+
+        @keyframes fontWeightChange {
+            0% {
+                font-variation-settings: 'wght' 100, 'wdth' 60;
+            }
+
+            100% {
+                font-variation-settings: "wght" 600, 'wdth' 400;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">ANYBODY</div>
+</body>
+
+</html>

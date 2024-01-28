@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            background-color: cornflowerblue;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+
+        }
+
+        .main {
+            width: 140px;
+            height: 140px;
+            background-color: white;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .main::after {
+            content: "";
+            border-radius: 15px;
+            height: 100px;
+            width: 20px;
+            background-color: #fff;
+            position: absolute;
+            top: -20px;
+            box-shadow: 20px 0 0 0 cornflowerblue, 40px 0 0 0 white, 60px 0 0 0 cornflowerblue,
+                80px 0 0 0 white, 100px 0 0 0 cornflowerblue, 120px 0 0 0 white, 60px 150px 0 8px white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main"></div>
+</body>
+
+</html>
