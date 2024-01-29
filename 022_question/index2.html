@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            background-color: cornflowerblue;
+            margin: 0;
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .animation {
+            width: 100px;
+            height: 100px;
+            background-color: khaki;
+            margin: auto 0;
+            animation: change 10s infinite linear;
+        }
+
+        @keyframes change {
+            to {
+                transform: translate(700px, 0);
+            }
+        }
+
+        #stop:checked~.animation {
+            animation-play-state: paused;
+        }
+
+        #play:checked~.animation {
+            animation-play-state: running;
+        }
+
+        /* .main:hover {
+            animation-play-state: paused;
+        } */
+        input {
+            display: none;
+        }
+
+        .btn {
+            width: 50px;
+            margin: 10px auto;
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="stop" type="radio" name="playAnimation" />
+    <input id="play" type="radio" name="playAnimation" />
+
+    <div class="box">
+        <label for="stop">
+            <div class="btn">stop</div>
+        </label>
+        <label for="play">
+            <div class="btn">play</div>
+        </label>
+    </div>
+
+    <div class="animation"></div>
+</body>
+
+</html>

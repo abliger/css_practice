@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            background-color: cornflowerblue;
+            margin: 0;
+            display: flex;
+            height: 100%;
+            width: 100%;
+        }
+
+        .main {
+            width: 100px;
+            height: 100px;
+            background-color: khaki;
+            margin: auto 0;
+            animation: change 10s infinite linear;
+        }
+
+        @keyframes change {
+            to {
+                transform: translate(700px, 0);
+            }
+        }
+
+        .start,
+        .stop {
+            opacity: 0;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            outline: 1px solid;
+            /* margin: 0 auto; */
+            /* justify-content: center; */
+            outline-offset: -2px;
+        }
+
+        .stop:target~.main {
+            animation-play-state: paused;
+        }
+
+        .start:target~.main {
+            animation-play-state: running;
+        }
+
+        /* .main:hover {
+            animation-play-state: paused;
+        } */
+        a {
+            outline: 1px solid;
+            height: min-content;
+            width: 50px;
+            padding: 10px;
+            text-align: center;
+            outline-offset: -2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="start" id="start">start</div>
+    <div class="stop" id="stop">stop</div>
+    <a class="btn" href="#stop">stop</a>
+    <a class="btn" href="#play">play</a>
+    <div class="main"></div>
+</body>
+
+</html>
